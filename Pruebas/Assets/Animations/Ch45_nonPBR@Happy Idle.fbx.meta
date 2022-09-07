@@ -1,42 +1,12 @@
 fileFormatVersion: 2
-guid: 7f109c7e6e4a8564290c339232486375
+guid: 802849536d111ff43b067ad13e3e4a02
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ch45_Body
-    second: {fileID: 2100000, guid: c11cd2f257c05b746836f4a670760889, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch45_1001_Diffuse
-    second: {fileID: 2800000, guid: eb3de9a2cfab30e4c89ec1a19f9875f1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch45_1001_Emissive
-    second: {fileID: 2800000, guid: 042fdc1dab731c948a9133bad03a18f5, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch45_1001_Glossiness
-    second: {fileID: 2800000, guid: 278b24e584fec124abbd14b67fec699f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch45_1001_Normal
-    second: {fileID: 2800000, guid: edfb2d266a9c6da4b9dcb1cb2d0dc88a, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch45_1001_Specular
-    second: {fileID: 2800000, guid: e18cfbabf34e6d94ebc22bcffad6cf3d, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -105,11 +75,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 802849536d111ff43b067ad13e3e4a02
-  - 76fb4a36f51dc4d4b8b081210e0b42b0
-  - ff78a49af8be0c4428021b2e96eb9ede
-  - 30b7b13ecd3c09d46add70a812864d76
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -878,11 +844,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 7f109c7e6e4a8564290c339232486375, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
