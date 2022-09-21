@@ -293,18 +293,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0.049549628, y: 0.9330454, z: -0.14130872, w: -0.3271131}
-<<<<<<< Updated upstream
-  m_LocalPosition: {x: 1.5260978, y: 1.6100223, z: 2.256885}
-=======
   m_LocalPosition: {x: 10.732, y: 6.18, z: 13.772}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 <<<<<<< HEAD
 --- !u!1001 &1632750405
 PrefabInstance:
@@ -364,7 +358,6 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51c7e687f4ff685429c83a487596fbf6, type: 3}
 =======
->>>>>>> Stashed changes
 --- !u!1 &1172527314
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,10 +549,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 >>>>>>> main
->>>>>>> Stashed changes
 --- !u!1 &1724667851
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,10 +645,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
---- !u!1 &1972522624
-GameObject:
-=======
 <<<<<<< HEAD
 --- !u!1001 &2081930968
 PrefabInstance:
@@ -728,13 +714,10 @@ MonoBehaviour:
 --- !u!1 &1972522624
 GameObject:
 >>>>>>> main
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 <<<<<<< HEAD
   m_GameObject: {fileID: 2081930969}
   m_Enabled: 1
@@ -746,7 +729,6 @@ GameObject:
 --- !u!65 &2081930971
 BoxCollider:
 =======
->>>>>>> Stashed changes
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972522628}
@@ -762,16 +744,11 @@ BoxCollider:
   m_IsActive: 1
 --- !u!136 &1972522625
 CapsuleCollider:
-<<<<<<< Updated upstream
-=======
 >>>>>>> main
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 <<<<<<< HEAD
   m_GameObject: {fileID: 2081930969}
   m_Material: {fileID: 0}
@@ -783,7 +760,6 @@ CapsuleCollider:
 --- !u!54 &2081930972
 Rigidbody:
 =======
->>>>>>> Stashed changes
   m_GameObject: {fileID: 1972522624}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -843,16 +819,11 @@ MeshFilter:
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1972522628
 Transform:
-<<<<<<< Updated upstream
-=======
 >>>>>>> main
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 <<<<<<< HEAD
   m_GameObject: {fileID: 2081930969}
   serializedVersion: 2
@@ -865,7 +836,6 @@ Transform:
   m_Constraints: 112
   m_CollisionDetection: 0
 =======
->>>>>>> Stashed changes
   m_GameObject: {fileID: 1972522624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
@@ -874,10 +844,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 >>>>>>> main
->>>>>>> Stashed changes
 --- !u!1001 &10096966895095796
 PrefabInstance:
   m_ObjectHideFlags: 0
