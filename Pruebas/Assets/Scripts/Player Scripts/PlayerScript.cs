@@ -46,8 +46,8 @@ public class PlayerScript : MonoBehaviour
     void PlayerMoveKeyboard()
     {
         if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) 
-        {
-            moveHorizontal = -1;
+        {        
+            moveHorizontal = -1;   
         }
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
@@ -63,20 +63,20 @@ public class PlayerScript : MonoBehaviour
             moveHorizontal = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.UpArrow))
         {
              moveUp = -1;
         }
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.UpArrow))
         {
             moveUp = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             moveUp = 1;
         }
-        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.DownArrow))
         {
             moveUp = 0;
         }

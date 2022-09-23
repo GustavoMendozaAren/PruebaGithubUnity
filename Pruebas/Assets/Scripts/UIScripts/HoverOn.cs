@@ -18,7 +18,7 @@ public class HoverOn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         PlayButton.GetComponent<Animator>().Play ("HoverOn");
-        Debug.Log("The cursor entered the selectable UI element.");
+        //Debug.Log("The cursor entered the selectable UI element.");
     }
 
     public void OnPointerExit(PointerEventData eventData)
