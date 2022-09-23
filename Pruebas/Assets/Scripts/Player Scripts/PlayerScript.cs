@@ -25,6 +25,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
+        moveVertical = 1;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
     }
@@ -33,7 +34,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         PlayerMoveKeyboard();
-        AnimatePlayer();
+        //AnimatePlayer();
     }
 
     void FixedUpdate()
@@ -79,14 +80,14 @@ public class PlayerScript : MonoBehaviour
             moveUp = 0;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             moveVertical = 1;
         }
         if(Input.GetMouseButtonUp(0))
         {
             moveVertical = 0;
-        }
+        }*/
     }
 
     void MoveAndRotate()
@@ -103,7 +104,7 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    void AnimatePlayer()
+    /*void AnimatePlayer()
     {
         if (moveVertical != 0)
         {
@@ -128,7 +129,7 @@ public class PlayerScript : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 
 
 }
