@@ -11,7 +11,7 @@ public class PlayerScript : MonoBehaviour
     private bool isPlayerMoving;
 
     public float playerSpeed = 0.2f;
-    private float rotationSpeed = 4f;
+    public float rotationSpeed = 4f;
 
     private float moveHorizontal, moveVertical, moveUp;
 
@@ -34,6 +34,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         PlayerMoveKeyboard();
+        Attack();
         //AnimatePlayer();
     }
 
@@ -130,6 +131,19 @@ public class PlayerScript : MonoBehaviour
             }
         }
     }*/
+
+    void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.ATTACK_ANIMATION))
+            {
+                anim.SetTrigger(MyTags.ATTACK_TRIGGER);
+            }
+
+        }
+    }
 
 
 }
