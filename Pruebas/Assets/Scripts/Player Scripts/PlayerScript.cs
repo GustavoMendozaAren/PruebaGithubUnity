@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
-        moveVertical = 0;
+        moveVertical = 1;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
     }
@@ -81,14 +81,14 @@ public class PlayerScript : MonoBehaviour
             moveUp = 0;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             moveVertical = 1;
         }
         if(Input.GetMouseButtonUp(0))
         {
             moveVertical = 0;
-        }
+        }*/
     }
 
     void MoveAndRotate()
@@ -107,29 +107,39 @@ public class PlayerScript : MonoBehaviour
 
     /*void AnimatePlayer()
     {
-        if (moveVertical != 0)
+
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (!isPlayerMoving)
+
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.CLAP_ANIMATION))
             {
-                if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.WALK_ANIMATION))
-                {
-                    isPlayerMoving = true;
-                    anim.SetTrigger(MyTags.WALK_TRIGGER);
-                }
+                anim.SetTrigger(MyTags.CLAP_TRIGGER);
             }
-            
+
         }
-        else
-        {
-            if (isPlayerMoving)
-            {
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.WALK_ANIMATION))
-                {
-                    isPlayerMoving = false;
-                    anim.SetTrigger(MyTags.STOP_TRIGGER);
-                }
-            }
-        }
+         if (moveVertical != 0)
+         {
+             if (!isPlayerMoving)
+             {
+                 if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.WALK_ANIMATION))
+                 {
+                     isPlayerMoving = true;
+                     anim.SetTrigger(MyTags.WALK_TRIGGER);
+                 }
+             }
+
+         }
+         else
+         {
+             if (isPlayerMoving)
+             {
+                 if (anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.WALK_ANIMATION))
+                 {
+                     isPlayerMoving = false;
+                     anim.SetTrigger(MyTags.STOP_TRIGGER);
+                 }
+             }
+         }
     }*/
 
     void Attack()
