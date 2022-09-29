@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
-        moveVertical = 1;
+        moveVertical = 0;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
     }
@@ -81,14 +81,14 @@ public class PlayerScript : MonoBehaviour
             moveUp = 0;
         }
 
-        /*if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             moveVertical = 1;
         }
         if(Input.GetMouseButtonUp(0))
         {
             moveVertical = 0;
-        }*/
+        }
     }
 
     void MoveAndRotate()
