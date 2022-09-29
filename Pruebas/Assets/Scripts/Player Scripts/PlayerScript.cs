@@ -81,14 +81,14 @@ public class PlayerScript : MonoBehaviour
             moveUp = 0;
         }
 
-        /*if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            moveVertical = 1;
+            moveVertical = 2;
         }
         if(Input.GetMouseButtonUp(0))
         {
-            moveVertical = 0;
-        }*/
+            moveVertical = 1;
+        }
     }
 
     void MoveAndRotate()

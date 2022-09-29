@@ -1543,7 +1543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844519323}
   m_Layer: 0
-  m_Name: Fase1 (1)
+  m_Name: Fase 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1566,8 +1566,8 @@ Transform:
   - {fileID: 914776736}
   - {fileID: 1035672229}
   - {fileID: 917990854}
-  - {fileID: 2068232321}
   - {fileID: 262638189}
+  - {fileID: 2068232321}
   - {fileID: 1626283696}
   - {fileID: 227760618}
   - {fileID: 1402443641}
@@ -2081,6 +2081,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2531d45de9fd90044be7c4c7ec5e85dc, type: 2}
+    - target: {fileID: 5866666021909216657, guid: e06776f8ff93ddf4dbaf999632fb8a36, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06776f8ff93ddf4dbaf999632fb8a36, type: 3}
 --- !u!1 &1044524358
