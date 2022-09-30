@@ -1565,8 +1565,8 @@ Transform:
   - {fileID: 432509333}
   - {fileID: 914776736}
   - {fileID: 1035672229}
-  - {fileID: 917990854}
   - {fileID: 262638189}
+  - {fileID: 917990854}
   - {fileID: 2068232321}
   - {fileID: 1626283696}
   - {fileID: 227760618}
@@ -2737,7 +2737,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929413728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07dbf98c413f3604087e9368a53d5219, type: 3}
   m_Name: 
@@ -2749,6 +2749,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d31a15e4aa626c949b4051163d253f37, type: 3}
   m_PrefabInstance: {fileID: 154687387}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1929413731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929413728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73004688c6d372741adcdaa113149b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 0.2
+  rotationSpeed: 12
 --- !u!54 &1929413732
 Rigidbody:
   m_ObjectHideFlags: 0
