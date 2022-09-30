@@ -25,7 +25,7 @@ public class AimScript : MonoBehaviour
 
     void Start()
     {
-        moveVertical = 0;
+        moveVertical = 1;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
     }
@@ -33,7 +33,7 @@ public class AimScript : MonoBehaviour
 
     void Update()
     {
-        PlayerMoveKeyboard();
+        //PlayerMoveKeyboard();
         Attack();
         //AnimatePlayer();
     }
@@ -43,7 +43,7 @@ public class AimScript : MonoBehaviour
         MoveAndRotate();
     }
 
-    void PlayerMoveKeyboard()
+    /*void PlayerMoveKeyboard()
     {
       
 
@@ -55,7 +55,7 @@ public class AimScript : MonoBehaviour
         {
             moveVertical = 0;
         }
-    }
+    }*/
 
     void MoveAndRotate()
     {
