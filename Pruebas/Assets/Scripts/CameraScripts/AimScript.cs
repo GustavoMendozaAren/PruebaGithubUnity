@@ -11,7 +11,7 @@ public class AimScript : MonoBehaviour
     //private bool isPlayerMoving;
 
     public float playerSpeed = 0.2f;
-    public float rotationSpeed = 12f;
+    public float rotationSpeed = 8f;
 
     private float moveHorizontal, moveVertical, moveUp;
 
@@ -25,7 +25,7 @@ public class AimScript : MonoBehaviour
 
     void Start()
     {
-        moveVertical = 1;
+        moveVertical = 0;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
     }
@@ -33,7 +33,7 @@ public class AimScript : MonoBehaviour
 
     void Update()
     {
-        //PlayerMoveKeyboard();
+        PlayerMoveKeyboard();
         Attack();
         //AnimatePlayer();
     }
@@ -43,7 +43,7 @@ public class AimScript : MonoBehaviour
         MoveAndRotate();
     }
 
-    /*void PlayerMoveKeyboard()
+    void PlayerMoveKeyboard()
     {
       
 
@@ -55,7 +55,7 @@ public class AimScript : MonoBehaviour
         {
             moveVertical = 0;
         }
-    }*/
+    }
 
     void MoveAndRotate()
     {
