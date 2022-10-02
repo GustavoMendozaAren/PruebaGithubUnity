@@ -25,7 +25,8 @@ public class AimScript : MonoBehaviour
 
     void Start()
     {
-        moveVertical = 0.2f;
+        anim.speed = 0f;
+        moveVertical = 0f;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
     }
