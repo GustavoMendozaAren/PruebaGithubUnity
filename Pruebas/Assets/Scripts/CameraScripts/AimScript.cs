@@ -10,7 +10,7 @@ public class AimScript : MonoBehaviour
     private Animator anim;
     //private bool isPlayerMoving;
 
-    public float playerSpeed = 0.2f;
+    public float playerSpeed = 0.1f;
     public float rotationSpeed = 8f;
 
     private float moveHorizontal, moveVertical, moveUp;
@@ -25,7 +25,7 @@ public class AimScript : MonoBehaviour
 
     void Start()
     {
-        moveVertical = 0;
+        moveVertical = 0.2f;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
     }
@@ -50,10 +50,12 @@ public class AimScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             moveVertical = 1;
+            anim.speed = 3.5f;
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
-            moveVertical = 0;
+            moveVertical = 0.1f;
+            anim.speed = 1f;
         }
     }
 
