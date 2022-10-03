@@ -9,6 +9,7 @@ public class CharacterSelectionScript : MonoBehaviour
     public GameObject[] text;
     public int selectedCharacter = 0;
     public int selectedText = 0;
+    //public static int selectedCharacter = 0;
 
     public void NextCharacter()
     {
@@ -44,7 +45,7 @@ public class CharacterSelectionScript : MonoBehaviour
     
     public void StartGame2()
     {
-        PlayerPrefs.SetInt("selectedCgaracter", selectedCharacter);
+        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         SceneManager.LoadScene("Gameplay");
     }
 
