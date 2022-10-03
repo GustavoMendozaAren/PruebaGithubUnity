@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelectionScript : MonoBehaviour
 {
@@ -43,7 +44,8 @@ public class CharacterSelectionScript : MonoBehaviour
     
     public void StartGame2()
     {
-
+        PlayerPrefs.SetInt("selectedCgaracter", selectedCharacter);
+        SceneManager.LoadScene("Gameplay");
     }
 
 }
