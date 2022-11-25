@@ -15,7 +15,7 @@ public class AimScript : MonoBehaviour
 
     private float moveHorizontal, moveVertical, moveUp;
 
-    private float rotY, rotX;
+    private float rotY, rotX, showtime = 0;
 
     private void Awake()
     {
@@ -37,6 +37,21 @@ public class AimScript : MonoBehaviour
         PlayerMoveKeyboard();
         Attack();
         //AnimatePlayer();
+        if (showtime > 0)
+        {
+            showtime -= Time.deltaTime;
+            //Debug.Log("TimerStart");
+            moveVertical = 3f;
+            anim.speed = 7f;
+        }
+        if (showtime < 0)
+        {
+            showtime = 0;
+            //Debug.Log("Timesup");
+            moveVertical = 0.1f;
+            anim.speed = 1f;
+        }
+
     }
 
     void FixedUpdate()
@@ -126,6 +141,17 @@ public class AimScript : MonoBehaviour
                 anim.SetTrigger(MyTags.ATTACK_TRIGGER);
             }
 
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Toroide")
+        {
+
+            Debug.Log("Enter");
+            showtime = 2;
+            
         }
     }
 

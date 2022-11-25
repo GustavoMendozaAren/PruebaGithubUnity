@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
-        moveVertical = 1;
+        moveVertical = 0.2f;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
     }
@@ -45,7 +45,7 @@ public class PlayerScript : MonoBehaviour
 
     void PlayerMoveKeyboard()
     {
-        if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) 
+        /*if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) 
         {        
             moveHorizontal = -1;   
         }
@@ -88,7 +88,7 @@ public class PlayerScript : MonoBehaviour
         if(Input.GetMouseButtonUp(0))
         {
             moveVertical = 1;
-        }
+        }*/
     }
 
     void MoveAndRotate()
@@ -154,6 +154,15 @@ public class PlayerScript : MonoBehaviour
 
         }
     }
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Toroide")
+        {
+
+            Debug.Log("Enter");
+        }
+    }*/
 
 
 }
