@@ -14,4 +14,5 @@ public class MyTags : MonoBehaviour
     public static string CLAP_TRIGGER = "Clap";
 
     public static string PLAYER_TAG = "Player";
+    public static string RING_TAG = "Ring";
 }

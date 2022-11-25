@@ -37,20 +37,7 @@ public class AimScript : MonoBehaviour
         PlayerMoveKeyboard();
         Attack();
         //AnimatePlayer();
-        if (showtime > 0)
-        {
-            showtime -= Time.deltaTime;
-            //Debug.Log("TimerStart");
-            moveVertical = 3f;
-            anim.speed = 7f;
-        }
-        if (showtime < 0)
-        {
-            showtime = 0;
-            //Debug.Log("Timesup");
-            moveVertical = 0.1f;
-            anim.speed = 1f;
-        }
+        RingAction();
 
     }
 
@@ -146,13 +133,32 @@ public class AimScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Toroide")
+        if (other.CompareTag("Ring"))
         {
 
             Debug.Log("Enter");
             showtime = 2;
-            
+            other.gameObject.SetActive(false);
         }
+    }
+
+    void RingAction()
+    {
+        if (showtime > 0)
+        {
+            showtime -= Time.deltaTime;
+            //Debug.Log("TimerStart");
+            moveVertical = 3f;
+            anim.speed = 7f;
+        }
+        if (showtime < 0)
+        {
+            showtime = 0;
+            //Debug.Log("Timesup");
+            moveVertical = 0.1f;
+            anim.speed = 1f;
+        }
+        
     }
 
 }
