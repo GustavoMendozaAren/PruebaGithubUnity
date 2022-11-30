@@ -10,7 +10,7 @@ public class RingScript : MonoBehaviour
     {
 
         
-        if (gameObject.activeSelf)
+        /*if (gameObject.activeSelf)
         {
             Debug.Log("Hola");
             
@@ -28,7 +28,7 @@ public class RingScript : MonoBehaviour
                 ActiveTime = 0;
                 gameObject.SetActive(true);
             }
-        }
+        }*/
         
             
         
