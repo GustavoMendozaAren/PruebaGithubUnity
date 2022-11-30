@@ -7,7 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
    public void PlayGame()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
         //Debug.Log("The cursor entered the selectable UI element.");
     }
 }
