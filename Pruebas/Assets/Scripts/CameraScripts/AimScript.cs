@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class AimScript : MonoBehaviour
 {
 
@@ -16,6 +17,9 @@ public class AimScript : MonoBehaviour
     private float moveHorizontal, moveVertical, moveUp;
 
     private float rotY, rotX, showtime = 0;
+
+    public LayerMask aimColliderLayerMask = new LayerMask();
+    public Transform debugTransform;
 
     private void Awake()
     {
@@ -38,6 +42,14 @@ public class AimScript : MonoBehaviour
         Attack();
         //AnimatePlayer();
         RingAction();
+
+
+        Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+        Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+        if ( Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        {
+            debugTransform.position = raycastHit.point;
+        }
 
     }
 
