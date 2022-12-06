@@ -20,6 +20,8 @@ public class AimScript : MonoBehaviour
 
     public LayerMask aimColliderLayerMask = new LayerMask();
     public Transform debugTransform;
+    public Transform pfBulletProjectile;
+    public Transform spawnBulletPosition;
 
     private void Awake()
     {
@@ -43,12 +45,22 @@ public class AimScript : MonoBehaviour
         //AnimatePlayer();
         RingAction();
 
+        //-------------------------------------------------
+
+        Vector3 mouseWorldPosition = Vector3.zero;
 
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         if ( Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
         {
             debugTransform.position = raycastHit.point;
+            mouseWorldPosition = raycastHit.point;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
+            Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
         }
 
     }
@@ -141,6 +153,10 @@ public class AimScript : MonoBehaviour
             }
 
         }
+
+        //---------------------------------
+
+        
     }
 
     private void OnTriggerEnter(Collider other)

@@ -81,6 +81,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7213847737048207911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5547669194593954954}
+  m_Layer: 0
+  m_Name: SpawnBulletPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5547669194593954954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213847737048207911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0203, z: 0.0276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7376287311240627550}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7376287309314431945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,6 +4011,7 @@ Transform:
   - {fileID: 7376287309558394179}
   - {fileID: 7376287309962790977}
   - {fileID: 1095174403663465000}
+  - {fileID: 5547669194593954954}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4030,7 +4061,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.05, z: 0.1}
+  m_Size: {x: 0.05, y: 0.02, z: 0.07}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7376287311240627548
 MonoBehaviour:
@@ -4064,6 +4095,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   debugTransform: {fileID: 1095174403663465000}
+  pfBulletProjectile: {fileID: 6621923915722567315, guid: 69aca0c2dd5164e4a812910ad85afe36, type: 3}
+  spawnBulletPosition: {fileID: 5547669194593954954}
 --- !u!1 &7376287311314241125
 GameObject:
   m_ObjectHideFlags: 0
