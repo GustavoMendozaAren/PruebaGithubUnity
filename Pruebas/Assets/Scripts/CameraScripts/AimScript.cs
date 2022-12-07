@@ -19,7 +19,7 @@ public class AimScript : MonoBehaviour
     private float rotY, rotX, showtime = 0;
 
     public LayerMask aimColliderLayerMask = new LayerMask();
-    public Transform debugTransform;
+    //public Transform debugTransform;
     public Transform pfBulletProjectile;
     public Transform spawnBulletPosition;
 
@@ -53,7 +53,7 @@ public class AimScript : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         if ( Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
         {
-            debugTransform.position = raycastHit.point;
+            //debugTransform.position = raycastHit.point;
             mouseWorldPosition = raycastHit.point;
         }
 
@@ -90,7 +90,8 @@ public class AimScript : MonoBehaviour
     {
         if (moveVertical != 0)
         {
-            myBody.MovePosition(transform.position + transform.forward * (moveVertical * playerSpeed));
+            //myBody.MovePosition(transform.position + transform.forward * (moveVertical * playerSpeed));
+            transform.position += transform.forward * (moveVertical * playerSpeed);
         }
 
         rotX -= rotationSpeed * Input.GetAxis("Mouse Y");
@@ -100,7 +101,7 @@ public class AimScript : MonoBehaviour
 
         //rotX += moveUp * rotationSpeed;
         //rotY += moveHorizontal * rotationSpeed;
-        myBody.rotation = Quaternion.Euler(rotX, rotY, 0f);
+        transform.rotation = Quaternion.Euler(rotX, rotY, 0f);
 
 
     }
