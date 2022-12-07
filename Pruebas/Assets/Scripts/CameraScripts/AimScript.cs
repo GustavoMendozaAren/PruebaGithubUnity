@@ -22,6 +22,9 @@ public class AimScript : MonoBehaviour
     //public Transform debugTransform;
     public Transform pfBulletProjectile;
     public Transform spawnBulletPosition;
+    //public Transform VfxBoom;
+
+   
 
     private void Awake()
     {
@@ -145,6 +148,8 @@ public class AimScript : MonoBehaviour
 
     void Attack()
     {
+        
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
 
@@ -152,11 +157,8 @@ public class AimScript : MonoBehaviour
             {
                 anim.SetTrigger(MyTags.ATTACK_TRIGGER);
             }
-
+            //Instantiate(VfxBoom, (transform.position), Quaternion.identity);
         }
-
-        
-
         
     }
 

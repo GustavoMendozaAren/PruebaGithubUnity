@@ -4094,9 +4094,9 @@ MonoBehaviour:
   aimColliderLayerMask:
     serializedVersion: 2
     m_Bits: 1
-  debugTransform: {fileID: 1095174403663465000}
   pfBulletProjectile: {fileID: 6621923915722567315, guid: 69aca0c2dd5164e4a812910ad85afe36, type: 3}
   spawnBulletPosition: {fileID: 5547669194593954954}
+  VfxBoom: {fileID: 3826256220299274190, guid: 3b7e489cc13dac144b93495cf5b38349, type: 3}
 --- !u!1 &7376287311314241125
 GameObject:
   m_ObjectHideFlags: 0
