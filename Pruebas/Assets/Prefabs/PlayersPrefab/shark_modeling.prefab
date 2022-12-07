@@ -105,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7213847737048207911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0138, y: 0.02331, z: 0.01226}
+  m_LocalPosition: {x: 0.0138, y: 0.02331, z: 0.0137}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7376287311240627550}
@@ -625,7 +625,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7376287309558394180}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &7376287309558394178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4062,7 +4062,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.05, y: 0.01, z: 0.07}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.01}
 --- !u!114 &7376287311240627548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4096,7 +4096,6 @@ MonoBehaviour:
     m_Bits: 1
   pfBulletProjectile: {fileID: 6621923915722567315, guid: 69aca0c2dd5164e4a812910ad85afe36, type: 3}
   spawnBulletPosition: {fileID: 5547669194593954954}
-  VfxBoom: {fileID: 3826256220299274190, guid: 3b7e489cc13dac144b93495cf5b38349, type: 3}
 --- !u!1 &7376287311314241125
 GameObject:
   m_ObjectHideFlags: 0
