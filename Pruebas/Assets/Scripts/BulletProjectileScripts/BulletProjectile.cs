@@ -7,6 +7,7 @@ public class BulletProjectile : MonoBehaviour
 
     private Rigidbody bulletRigidbody;
     public Transform VfxHitAnother;
+    public Transform VfxHitTarget;
 
     private void Awake()
     {
@@ -25,7 +26,10 @@ public class BulletProjectile : MonoBehaviour
         if (another.GetComponent<BulletTarget>() != null)
         {
             //Hit target
-        } else
+            Instantiate(VfxHitTarget, transform.position, Quaternion.identity);
+
+        }
+        else
         {
             //Hit something else
             Instantiate(VfxHitAnother, transform.position, Quaternion.identity);
