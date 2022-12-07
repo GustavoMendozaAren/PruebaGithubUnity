@@ -6,6 +6,7 @@ public class BulletProjectile : MonoBehaviour
 {
 
     private Rigidbody bulletRigidbody;
+    public Transform VfxHitAnother;
 
     private void Awake()
     {
@@ -20,6 +21,15 @@ public class BulletProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider another)
     {
+
+        if (another.GetComponent<BulletTarget>() != null)
+        {
+            //Hit target
+        } else
+        {
+            //Hit something else
+            Instantiate(VfxHitAnother, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
     
