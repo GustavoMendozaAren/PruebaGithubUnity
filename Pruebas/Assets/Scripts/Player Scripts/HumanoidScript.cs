@@ -35,7 +35,10 @@ public class HumanoidScript : MonoBehaviour
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.CLAP_ANIMATION))
             {
                 anim.SetTrigger(MyTags.CLAP_TRIGGER);
+                FindObjectOfType<AudioManagerG>().Play2("Claps");
             }
+
+            
 
         }
     }
