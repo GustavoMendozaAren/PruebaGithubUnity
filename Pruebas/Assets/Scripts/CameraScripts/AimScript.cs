@@ -14,7 +14,7 @@ public class AimScript : MonoBehaviour
     public float playerSpeed = 0.1f;
     public float rotationSpeed = 8f;
 
-    private float moveHorizontal, moveVertical, moveUp;
+    private float moveVertical;
 
     private float rotY, rotX, showtime = 0;
 

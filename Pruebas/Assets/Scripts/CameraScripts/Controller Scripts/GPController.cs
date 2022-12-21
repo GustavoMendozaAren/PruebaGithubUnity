@@ -7,10 +7,7 @@ public class GPController : MonoBehaviour
 
     public static bool GamePaused = false;
 
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()
