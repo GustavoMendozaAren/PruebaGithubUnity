@@ -9,7 +9,7 @@ public class EnemyScript : MonoBehaviour
     private Rigidbody myBody;
     private Animator anim;
 
-    private float enemy_Speed = 10f;
+    private float enemy_Speed = 5f;
 
     private float enemy_Watch_Treshgold = 70f;
     private float enemy_Attack_Treshold = 6f;
@@ -36,10 +36,10 @@ public class EnemyScript : MonoBehaviour
         direction.Normalize();
 
         Vector3 velocity = direction * enemy_Speed;
-
+        
         if (distance > enemy_Attack_Treshold && distance < enemy_Watch_Treshgold)
         {
-            Debug.Log("SiSePudo");
+            
             myBody.velocity = new Vector3(velocity.x, velocity.y, velocity.z);
 
             if (anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.ATTACK_ANIMATION)) {
@@ -48,7 +48,7 @@ public class EnemyScript : MonoBehaviour
 
             anim.SetTrigger(MyTags.SWIM_TRIGGER);
 
-            transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, transform.position.z));
+            transform.LookAt(new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z));
 
         } else if (distance < enemy_Attack_Treshold)
         {
@@ -60,7 +60,7 @@ public class EnemyScript : MonoBehaviour
 
             anim.SetTrigger(MyTags.ATTACK_TRIGGER);
 
-            transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, transform.position.z));
+            transform.LookAt(new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z));
         } else
         {
 
