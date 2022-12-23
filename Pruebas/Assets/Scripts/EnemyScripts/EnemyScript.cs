@@ -10,9 +10,14 @@ public class EnemyScript : MonoBehaviour
     private Animator anim;
 
     private float enemy_Speed = 5f;
+    private float enemy_Speed2 = 2f;
 
     private float enemy_Watch_Treshgold = 70f;
     private float enemy_Attack_Treshold = 6f;
+
+    public Transform waypoint1;
+
+    private int a = 1;
 
     void Awake()
     {
@@ -63,6 +68,24 @@ public class EnemyScript : MonoBehaviour
             transform.LookAt(new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z));
         } else
         {
+            
+                Vector3 direction2 = waypoint1.transform.position - transform.position;
+                float distance2 = direction2.magnitude;
+                direction2.Normalize();
+
+                Vector3 velocity2 = direction2 * enemy_Speed2;
+
+                myBody.velocity = new Vector3(velocity2.x, velocity2.y, velocity2.z);
+
+                transform.LookAt(waypoint1);
+
+        }
+        
+        
+        
+        
+        /*else
+        {
 
             myBody.velocity = new Vector3(0f, 0f, 0f);
 
@@ -73,6 +96,6 @@ public class EnemyScript : MonoBehaviour
 
             }
 
-        }
+        }*/
     }
 }
