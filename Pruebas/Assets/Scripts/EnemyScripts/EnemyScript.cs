@@ -79,6 +79,7 @@ public class EnemyScript : MonoBehaviour
 
                 transform.LookAt(waypoint1);
 
+
         }
         
         

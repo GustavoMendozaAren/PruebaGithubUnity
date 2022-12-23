@@ -18,7 +18,7 @@ public class TestScriptLookAtPoint : MonoBehaviour
 
         float x = 15*Mathf.Cos(counter);
         float y = 5;
-        float z = 80+15*Mathf.Sin(counter);
+        float z = 60+15*Mathf.Sin(counter);
 
         transform.position = new Vector3(x, y, z);
 
