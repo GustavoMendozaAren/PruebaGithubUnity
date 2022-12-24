@@ -17,4 +17,5 @@ public class MyTags : MonoBehaviour
 
     public static string PLAYER_TAG = "Player";
     public static string RING_TAG = "Ring";
+    public static string ENEMY_TAG = "Enemy";
 }
