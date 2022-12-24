@@ -100,6 +100,7 @@ public class AimScript : MonoBehaviour
         }
 
         rotX -= rotationSpeed * Input.GetAxis("Mouse Y");
+        
         rotY += rotationSpeed * Input.GetAxis("Mouse X");
 
         //transform.eulerAngles = new Vector3(rotX, rotY, 0f);
