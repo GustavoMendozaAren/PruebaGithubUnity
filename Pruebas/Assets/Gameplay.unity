@@ -5110,5 +5110,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: SharkAnim
       objectReference: {fileID: 0}
+    - target: {fileID: 8443438927675945016, guid: 7cc86a2e328e1b44a9dc8fbbb0602281, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc86a2e328e1b44a9dc8fbbb0602281, type: 3}
