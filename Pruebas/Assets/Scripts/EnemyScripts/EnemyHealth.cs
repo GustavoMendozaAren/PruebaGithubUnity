@@ -47,12 +47,12 @@ public class EnemyHealth : MonoBehaviour
         }
         if (health == 0)
         {
-            myBody.detectCollisions = false;
+            //myBody.detectCollisions = false;
 
-            enemyScript.enabled = false;
-            
-            anim.enabled = false;
-            Invoke("DeactivateEnemy", 2f);
+            //enemyScript.enabled = false;
+            //anim.speed = .5f;
+            //Invoke("DeactivateEnemy", 2f);
+            DeactivateEnemy();
 
         }
 
