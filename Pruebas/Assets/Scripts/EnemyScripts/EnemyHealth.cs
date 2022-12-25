@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
 
     private EnemyScript enemyScript;
     private Animator anim;
+    private Rigidbody myBody;
+    
 
     public Transform DeadExplosion;
 
@@ -19,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyScript = GetComponent<EnemyScript>();
         anim = GetComponent<Animator>();
+        myBody = GetComponent<Rigidbody>();
     }
 
     private void Start()
@@ -29,20 +32,28 @@ public class EnemyHealth : MonoBehaviour
 
     public void ApplyDamage (int damageAmount)
     {
+        
+        
         health -= damageAmount;
 
         healthBar.SetHealth(health);
+            
+        
 
         if (health < 0)
         {
             health = 0;
+            
         }
         if (health == 0)
         {
-            enemyScript.enabled = false;
+            myBody.detectCollisions = false;
 
+            enemyScript.enabled = false;
+            
             anim.enabled = false;
             Invoke("DeactivateEnemy", 2f);
+
         }
 
     }
