@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     
 
     public Transform DeadExplosion;
+    public Transform DeadSymbol;
 
     public HealthBar healthBar;
 
@@ -47,12 +48,14 @@ public class EnemyHealth : MonoBehaviour
         }
         if (health == 0)
         {
-            //myBody.detectCollisions = false;
+            myBody.detectCollisions = false;
 
-            //enemyScript.enabled = false;
-            //anim.speed = .5f;
-            //Invoke("DeactivateEnemy", 2f);
-            DeactivateEnemy();
+            enemyScript.enabled = false;
+            anim.enabled = false;
+            Invoke("DeactivateEnemy", 2f);
+            //DeactivateEnemy();
+            Vector3 Hola = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+            Instantiate(DeadSymbol, Hola, Quaternion.identity);
 
         }
 
@@ -60,6 +63,7 @@ public class EnemyHealth : MonoBehaviour
 
     void DeactivateEnemy()
     {
+        
         Instantiate(DeadExplosion, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }
