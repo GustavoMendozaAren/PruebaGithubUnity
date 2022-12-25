@@ -5,6 +5,8 @@ using UnityEngine;
 public class BulletProjectile : MonoBehaviour
 {
 
+    public int damageAmount = 2;
+
     private Rigidbody bulletRigidbody;
     public Transform VfxHitAnother;
     public Transform VfxHitTarget;
@@ -25,7 +27,8 @@ public class BulletProjectile : MonoBehaviour
         if (another.CompareTag("Enemy"))
         {
 
-            Debug.Log("HitEnemy");
+            //Debug.Log("HitEnemy");
+            another.GetComponent<EnemyHealth>().ApplyDamage(damageAmount);
         }
 
         if (another.GetComponent<BulletTarget>() != null)
