@@ -9,12 +9,17 @@ public class SemiCircle : MonoBehaviour
     bool sh = false;
 
     Rigidbody mRigid;
+    public GameObject enemy;
 
     private void Awake()
     {
         mRigid = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        Invoke("ActiveEnemy", 3f);
+    }
     void Update()
     {
         if (!sh)
@@ -58,4 +63,11 @@ public class SemiCircle : MonoBehaviour
 
         transform.position = new Vector3(x1, y1, z1);
     }
+
+    void ActiveEnemy()
+    {
+        enemy.gameObject.SetActive(true);
+    }
+
+
 }
