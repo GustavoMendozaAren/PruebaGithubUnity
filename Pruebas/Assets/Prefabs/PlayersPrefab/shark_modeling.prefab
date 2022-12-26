@@ -569,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7376287309558394180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.012, z: -0.02}
+  m_LocalPosition: {x: 0.02, y: 0.014, z: -0.02}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 7376287311240627550}
@@ -598,7 +598,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.2
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -3988,7 +3988,8 @@ GameObject:
   - component: {fileID: 7376287311240627547}
   - component: {fileID: 7376287311240627548}
   - component: {fileID: 7376287311240627549}
-  m_Layer: 0
+  - component: {fileID: 4932151866544354297}
+  m_Layer: 6
   m_Name: shark_modeling
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4061,7 +4062,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.01, z: 0.07}
+  m_Size: {x: 0.015, y: 0.01, z: 0.07}
   m_Center: {x: 0, y: 0, z: -0.01}
 --- !u!114 &7376287311240627548
 MonoBehaviour:
@@ -4096,6 +4097,20 @@ MonoBehaviour:
     m_Bits: 1
   pfBulletProjectile: {fileID: 6621923915722567315, guid: 69aca0c2dd5164e4a812910ad85afe36, type: 3}
   spawnBulletPosition: {fileID: 5547669194593954954}
+--- !u!114 &4932151866544354297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376287311240627551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc500b4813c5e7441ac14baf57503029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  DeadPanel: {fileID: 0}
 --- !u!1 &7376287311314241125
 GameObject:
   m_ObjectHideFlags: 0

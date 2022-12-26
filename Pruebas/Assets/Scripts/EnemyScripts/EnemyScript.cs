@@ -17,6 +17,8 @@ public class EnemyScript : MonoBehaviour
 
     public Transform waypoint1;
 
+    public GameObject damagePoint;
+
 
     void Awake()
     {
@@ -108,5 +110,15 @@ public class EnemyScript : MonoBehaviour
             }
 
         }*/
+    }
+
+    void ActivateDamagePoint()
+    {
+        damagePoint.SetActive(true);
+    }
+
+    void DeactivateDamagePoint()
+    {
+        damagePoint.SetActive(false);
     }
 }
