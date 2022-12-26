@@ -6,11 +6,12 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public int health = 10;
+    private AimScript playerScript;
 
-    public GameObject DeadPanel;
-
-
-
+    private void Awake()
+    {
+        playerScript = GetComponent<AimScript>();
+    }
     public void ApplyDamage(int damageAmaount)
     {
 
@@ -25,10 +26,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (health == 0)
         {
-            Time.timeScale = 0f;
-            DeadPanel.SetActive(true);
-            health = 4;
+            playerScript.enabled = false;
+            //DeadPanel.SetActive(true);
+            //Time.timeScale = 0f;
 
+            GameplaycontrollerS.instance.isPlayerAlive = false;
+
+            //GameOver Panel
+            GameplaycontrollerS.instance.GameOver();
         }
 
 

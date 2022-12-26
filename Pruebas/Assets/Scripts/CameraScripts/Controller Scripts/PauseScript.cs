@@ -8,6 +8,7 @@ public class PauseScript : MonoBehaviour
     public static bool GamePaused = false;
 
     public GameObject PauseMenuUI;
+    public GameObject DeadPanel2;
 
     void Update()
     {
@@ -27,8 +28,6 @@ public class PauseScript : MonoBehaviour
                 
             }
         }
-
-
 
     }
 
