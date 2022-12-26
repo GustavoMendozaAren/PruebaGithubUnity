@@ -25,9 +25,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (health == 0)
         {
-
+            Time.timeScale = 0f;
             DeadPanel.SetActive(true);
-
+            health = 4;
 
         }
 
