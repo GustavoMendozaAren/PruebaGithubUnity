@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
     
 
     public Transform DeadExplosion;
-    public Transform DeadSymbol;
+    //public Transform DeadSymbol;
 
     public HealthBar healthBar;
 
@@ -52,10 +52,10 @@ public class EnemyHealth : MonoBehaviour
 
             enemyScript.enabled = false;
             anim.enabled = false;
-            Invoke("DeactivateEnemy", 2f);
-            //DeactivateEnemy();
-            Vector3 Hola = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
-            Instantiate(DeadSymbol, Hola, Quaternion.identity);
+            //Invoke("DeactivateEnemy", 2f);
+            DeactivateEnemy();
+            //Vector3 Hola = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+            //Instantiate(DeadSymbol, Hola, Quaternion.identity);
 
         }
 

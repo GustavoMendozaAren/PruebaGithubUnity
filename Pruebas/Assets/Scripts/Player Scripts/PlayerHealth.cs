@@ -8,14 +8,25 @@ public class PlayerHealth : MonoBehaviour
     public int health = 10;
     private AimScript playerScript;
 
+    public PlayerHealthBar playerHealthBar;
+    public int currentHealth;
+
     private void Awake()
     {
         playerScript = GetComponent<AimScript>();
+    }
+
+    private void Start()
+    {
+        currentHealth = health;
+        playerHealthBar.MaxHealth(currentHealth);
     }
     public void ApplyDamage(int damageAmaount)
     {
 
         health -= damageAmaount;
+
+        playerHealthBar.SetHealth(health);
 
         if (health < 0)
         {

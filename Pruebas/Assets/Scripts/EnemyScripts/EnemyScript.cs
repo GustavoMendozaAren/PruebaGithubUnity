@@ -82,7 +82,7 @@ public class EnemyScript : MonoBehaviour
         {
             
                 Vector3 direction2 = waypoint1.transform.position - transform.position;
-                float distance2 = direction2.magnitude;
+                //float distance2 = direction2.magnitude;
                 direction2.Normalize();
 
                 Vector3 velocity2 = direction2 * enemy_Speed2;

@@ -44,14 +44,9 @@ public class AimScript : MonoBehaviour
     void Update()
     {
         PlayerMoveKeyboard();
-        Attack();
-        //AnimatePlayer();
+        //Attack();
         RingAction();
         Shooting();
-
-        //-------------------------------------------------
-
-        
 
     }
 
@@ -66,7 +61,7 @@ public class AimScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            moveVertical = 1;
+            moveVertical = 1f;
             anim.speed = 3.5f;
         }
         if (Input.GetKeyUp(KeyCode.W))
@@ -80,8 +75,8 @@ public class AimScript : MonoBehaviour
     {
         if (moveVertical != 0)
         {
-            //myBody.MovePosition(transform.position + transform.forward * (moveVertical * playerSpeed));
-            transform.position += transform.forward * (moveVertical * playerSpeed);
+            myBody.MovePosition(transform.position + transform.forward * (moveVertical * playerSpeed));
+            //transform.position += transform.forward * (moveVertical * playerSpeed);
         }
 
         rotX -= rotationSpeed * Input.GetAxis("Mouse Y");
@@ -118,43 +113,7 @@ public class AimScript : MonoBehaviour
         }
     }
 
-    /*void AnimatePlayer()
-    {
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.CLAP_ANIMATION))
-            {
-                anim.SetTrigger(MyTags.CLAP_TRIGGER);
-            }
-
-        }
-         if (moveVertical != 0)
-         {
-             if (!isPlayerMoving)
-             {
-                 if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.WALK_ANIMATION))
-                 {
-                     isPlayerMoving = true;
-                     anim.SetTrigger(MyTags.WALK_TRIGGER);
-                 }
-             }
-
-         }
-         else
-         {
-             if (isPlayerMoving)
-             {
-                 if (anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.WALK_ANIMATION))
-                 {
-                     isPlayerMoving = false;
-                     anim.SetTrigger(MyTags.STOP_TRIGGER);
-                 }
-             }
-         }
-    }*/
-
+    /*
     void Attack()
     {
         
@@ -169,7 +128,7 @@ public class AimScript : MonoBehaviour
             //Instantiate(VfxBoom, (transform.position), Quaternion.identity);
         }
         
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
