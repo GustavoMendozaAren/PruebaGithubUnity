@@ -47,6 +47,7 @@ public class AimScript : MonoBehaviour
         //Attack();
         RingAction();
         Shooting();
+        
 
     }
 
@@ -70,6 +71,8 @@ public class AimScript : MonoBehaviour
             anim.speed = 1f;
         }
     }
+
+    
 
     void MoveAndRotate()
     {
@@ -103,6 +106,7 @@ public class AimScript : MonoBehaviour
             //debugTransform.position = raycastHit.point;
             mouseWorldPosition = raycastHit.point;
         }
+
 
         if (Input.GetMouseButtonDown(0))
         {

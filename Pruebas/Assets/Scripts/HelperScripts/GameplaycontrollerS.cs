@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameplaycontrollerS : MonoBehaviour
 {
@@ -10,8 +11,14 @@ public class GameplaycontrollerS : MonoBehaviour
 
     public GameObject DeadPanel;
 
+    public Animator WeaponsText;
+    public Animator WeaponsText2;
+
     [HideInInspector]
     public bool isPlayerAlive;
+
+    [HideInInspector]
+    public bool Weapon1 = false;
 
     private void Awake()
     {
@@ -22,6 +29,10 @@ public class GameplaycontrollerS : MonoBehaviour
     void Start()
     {
         isPlayerAlive = true;
+    }
+    private void Update()
+    {
+        WeaponChange();
     }
 
 
@@ -53,5 +64,22 @@ public class GameplaycontrollerS : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    void WeaponChange()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            print("W1");
+            Weapon1 = false;
+            WeaponsText.Play("Weapon1Fade");
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            print("W2");
+            Weapon1 = true;
+            WeaponsText2.Play("Weapon2Fade");
+        }
     }
 }
