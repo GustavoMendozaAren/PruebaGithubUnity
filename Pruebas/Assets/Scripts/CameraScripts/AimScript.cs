@@ -45,7 +45,7 @@ public class AimScript : MonoBehaviour
     {
         PlayerMoveKeyboard();
         //Attack();
-        RingAction();
+        //RingAction();
         Shooting();
         
 
@@ -116,7 +116,16 @@ public class AimScript : MonoBehaviour
 
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ring"))
+        {
 
+            Debug.Log("Enter");
+            showtime = 2;
+            other.gameObject.SetActive(false);
+        }
+    }
     /*
     void Attack()
     {
@@ -134,18 +143,9 @@ public class AimScript : MonoBehaviour
         
     }*/
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Ring"))
-        {
+    
 
-            Debug.Log("Enter");
-            showtime = 2;
-            other.gameObject.SetActive(false);
-        }
-    }
-
-    void RingAction()
+    /*void RingAction()
     {
         if (showtime > 0)
         {
@@ -162,6 +162,6 @@ public class AimScript : MonoBehaviour
             anim.speed = 1f;
         }
         
-    }
+    }*/
 
 }
