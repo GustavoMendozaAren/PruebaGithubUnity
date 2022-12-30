@@ -29,7 +29,7 @@ public class HumanoidScript : MonoBehaviour
     void AnimatePlayer()
     {
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.G))
         {
 
             if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.CLAP_ANIMATION))

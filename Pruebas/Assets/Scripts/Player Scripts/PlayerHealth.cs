@@ -49,6 +49,15 @@ public class PlayerHealth : MonoBehaviour
 
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.CompareTag("WeaponDrop"))
+        {
+            other.gameObject.SetActive(false);
+            GameplaycontrollerS.instance.WeaponCollected();
+        }
+    }
 
 
 

@@ -13,12 +13,16 @@ public class GameplaycontrollerS : MonoBehaviour
 
     public Animator WeaponsText;
     public Animator WeaponsText2;
+    public Animator SwitchWeapons;
 
     [HideInInspector]
     public bool isPlayerAlive;
 
     [HideInInspector]
     public bool Weapon1 = false;
+
+    private bool Ciclo = false;
+    private bool CambioDeArma = false;
 
     private void Awake()
     {
@@ -68,18 +72,30 @@ public class GameplaycontrollerS : MonoBehaviour
 
     void WeaponChange()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (CambioDeArma)
         {
-            print("W1");
-            Weapon1 = false;
-            WeaponsText.Play("Weapon1Fade");
-        }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            print("W2");
-            Weapon1 = true;
-            WeaponsText2.Play("Weapon2Fade");
+            if (Input.GetKeyDown(KeyCode.E) && !Ciclo)
+            {
+                //print("W1");
+                Weapon1 = false;
+                WeaponsText.Play("Weapon1Fade");
+                Ciclo = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && Ciclo)
+            {
+                //print("W2");
+                Weapon1 = true;
+                WeaponsText2.Play("Weapon2Fade");
+                Ciclo = false;
+            }
+
         }
+    }
+
+    public void WeaponCollected()
+    {
+        CambioDeArma = true;
+        SwitchWeapons.Play("CambioDeAramaFade");
     }
 }

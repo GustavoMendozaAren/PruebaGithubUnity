@@ -91,7 +91,7 @@ public class EnemyScript : MonoBehaviour
             //Vector3 velocity2 = direction2 * enemy_Speed2;
 
             //myBody.velocity = new Vector3(velocity2.x, velocity2.y, velocity2.z);
-            var step = enemy_Speed * Time.deltaTime; // calculate distance to move
+            var step = enemy_Speed2 * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, waypoint1.transform.position, step);
 
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotationWayPoint, enemy_Speed2 * Time.deltaTime);
