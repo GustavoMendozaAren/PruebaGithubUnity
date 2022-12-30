@@ -5854,6 +5854,10 @@ PrefabInstance:
       propertyPath: playerHealthBar
       value: 
       objectReference: {fileID: 804281074}
+    - target: {fileID: 7376287311240627546, guid: 9f91cd97d1a4a6f4d80860aafbe85496, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7376287311240627550, guid: 9f91cd97d1a4a6f4d80860aafbe85496, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6242,6 +6246,10 @@ PrefabInstance:
     - target: {fileID: 8443438927675944996, guid: 7cc86a2e328e1b44a9dc8fbbb0602281, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443438927675944997, guid: 7cc86a2e328e1b44a9dc8fbbb0602281, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443438927675944999, guid: 7cc86a2e328e1b44a9dc8fbbb0602281, type: 3}
       propertyPath: waypoint1
