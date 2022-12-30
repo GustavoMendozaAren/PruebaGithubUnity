@@ -51,8 +51,10 @@ public class EnemyScript : MonoBehaviour
         
         if (distance > enemy_Attack_Treshold && distance < enemy_Watch_Treshgold)
         {
-            
-            myBody.velocity = new Vector3(velocity.x, velocity.y, velocity.z);
+
+            //myBody.velocity = new Vector3(velocity.x, velocity.y, velocity.z);
+            var step = enemy_Speed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
 
             /*if (anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.ATTACK_ANIMATION)) {
                 anim.SetTrigger(MyTags.STOP_TRIGGER);
@@ -65,8 +67,9 @@ public class EnemyScript : MonoBehaviour
 
         } else if (distance < enemy_Attack_Treshold)
         {
-            myBody.velocity = new Vector3(velocity.x, velocity.y, velocity.z);
-
+            //myBody.velocity = new Vector3(velocity.x, velocity.y, velocity.z);
+            var step = enemy_Speed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
             /*if (anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.SWIM_ANIMATION))
             {
                 anim.SetTrigger(MyTags.STOP_TRIGGER);
@@ -80,16 +83,18 @@ public class EnemyScript : MonoBehaviour
 
         } else
         {
-            
-                Vector3 direction2 = waypoint1.transform.position - transform.position;
-                //float distance2 = direction2.magnitude;
-                direction2.Normalize();
 
-                Vector3 velocity2 = direction2 * enemy_Speed2;
+            //Vector3 direction2 = waypoint1.transform.position - transform.position;
+            ////float distance2 = direction2.magnitude;
+            //direction2.Normalize();
 
-                myBody.velocity = new Vector3(velocity2.x, velocity2.y, velocity2.z);
+            //Vector3 velocity2 = direction2 * enemy_Speed2;
 
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotationWayPoint, enemy_Speed2 * Time.deltaTime);
+            //myBody.velocity = new Vector3(velocity2.x, velocity2.y, velocity2.z);
+            var step = enemy_Speed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, waypoint1.transform.position, step);
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotationWayPoint, enemy_Speed2 * Time.deltaTime);
 
 
         }
