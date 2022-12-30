@@ -46,12 +46,12 @@ public class BulletProjectile : MonoBehaviour
         {
             if (GameplaycontrollerS.instance.Weapon1 == false)
             {
-                print("Hola");
+                //print("Hola");
                 Instantiate(WeaponC1, transform.position, Quaternion.identity);
             }
             if (GameplaycontrollerS.instance.Weapon1 == true)
             {
-                print("Adios");
+                //print("Adios");
                 Instantiate(WeaponC2, transform.position, Quaternion.identity);
             }
             //Hit something else

@@ -116,7 +116,7 @@ public class AimScript : MonoBehaviour
 
         }
     }
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ring"))
         {
@@ -125,25 +125,11 @@ public class AimScript : MonoBehaviour
             showtime = 2;
             other.gameObject.SetActive(false);
         }
-    }
-    /*
-    void Attack()
-    {
-        
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (other.CompareTag("WeaponDrop"))
         {
 
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName(MyTags.ATTACK_ANIMATION))
-            {
-                anim.SetTrigger(MyTags.ATTACK_TRIGGER);
-            }
-            //Instantiate(VfxBoom, (transform.position), Quaternion.identity);
         }
-        
-    }*/
-
-    
+    }
 
     /*void RingAction()
     {
