@@ -644,18 +644,6 @@ Transform:
   m_Father: {fileID: 2660291016258536541}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2660291016277306979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2894171083172098441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 758e5cb7d264f3e4dbf706c78bf8d5e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2660291016280837477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,7 +2031,7 @@ GameObject:
   - component: {fileID: 2660291017689939043}
   m_Layer: 0
   m_Name: Ch04_nonPBR
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2129,6 +2117,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 0.1
   rotationSpeed: 8
+  aimColliderLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  pfBulletProjectile: {fileID: 0}
+  spawnBulletPosition: {fileID: 0}
 --- !u!114 &2660291017689939043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2390,6 +2383,18 @@ Transform:
   m_Father: {fileID: 2660291016258536541}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2660291016277306979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894171083172098441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758e5cb7d264f3e4dbf706c78bf8d5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2660291016936066264
 PrefabInstance:
   m_ObjectHideFlags: 0
