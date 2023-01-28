@@ -11,6 +11,9 @@ public class GameplaycontrollerS : MonoBehaviour
 
     public GameObject DeadPanel;
 
+    public GameObject enemy;
+    public GameObject fpoint;
+
     public Animator WeaponsText;
     public Animator WeaponsText2;
     public Animator SwitchWeapons;
@@ -33,6 +36,8 @@ public class GameplaycontrollerS : MonoBehaviour
     void Start()
     {
         isPlayerAlive = true;
+
+        Invoke("ActiveEnemy", 3f);
     }
     private void Update()
     {
@@ -97,5 +102,11 @@ public class GameplaycontrollerS : MonoBehaviour
     {
         CambioDeArma = true;
         SwitchWeapons.Play("CambioDeAramaFade");
+    }
+
+    void ActiveEnemy()
+    {
+        enemy.gameObject.SetActive(true);
+        fpoint.gameObject.SetActive(true);
     }
 }

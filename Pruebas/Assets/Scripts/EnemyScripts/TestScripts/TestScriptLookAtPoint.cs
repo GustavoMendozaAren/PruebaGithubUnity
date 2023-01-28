@@ -7,6 +7,11 @@ public class TestScriptLookAtPoint : MonoBehaviour
 
     float counter = 0f;
 
+    private void Awake()
+    {
+        
+    }
+
     void Update()
     {
         Movement_1();
