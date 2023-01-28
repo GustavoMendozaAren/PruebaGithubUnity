@@ -42,6 +42,7 @@ public class GameplaycontrollerS : MonoBehaviour
     private void Update()
     {
         WeaponChange();
+        //PlayerA();
     }
 
 
@@ -58,14 +59,17 @@ public class GameplaycontrollerS : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0f;
-        DeadPanel.SetActive(true);
+
+            Time.timeScale = 0f;
+            DeadPanel.SetActive(true);
+        
     }
+
 
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+        SceneManager.LoadScene("Gameplay");
 
     }
 

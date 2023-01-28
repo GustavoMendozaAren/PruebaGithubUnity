@@ -8,25 +8,32 @@ public class PlayerHealth : MonoBehaviour
     public int health = 10;
     private AimScript playerScript;
 
-    public PlayerHealthBar playerHealthBar;
+    public PlayerHealthBar playerhealthBar;
     public int currentHealth;
 
     private void Awake()
     {
         playerScript = GetComponent<AimScript>();
+        //GameplaycontrollerS.instance.isPlayerAlive = true;
+
     }
 
     private void Start()
     {
+        Healthfunction();
+    }
+
+    public void Healthfunction()
+    {
         currentHealth = health;
-        playerHealthBar.MaxHealth(currentHealth);
+        playerhealthBar.MaxHealth(currentHealth);
     }
     public void ApplyDamage(int damageAmaount)
     {
 
         health -= damageAmaount;
 
-        playerHealthBar.SetHealth(health);
+        playerhealthBar.SetHealth(health);
 
         if (health < 0)
         {
@@ -41,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
             //DeadPanel.SetActive(true);
             //Time.timeScale = 0f;
 
-            GameplaycontrollerS.instance.isPlayerAlive = false;
+            //GameplaycontrollerS.instance.isPlayerAlive = false;
 
             //GameOver Panel
             GameplaycontrollerS.instance.GameOver();
