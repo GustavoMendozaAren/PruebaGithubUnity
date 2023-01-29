@@ -10,6 +10,7 @@ public class GameplaycontrollerS : MonoBehaviour
     public static GameplaycontrollerS instance;
 
     public GameObject DeadPanel;
+    public GameObject WonPanel;
 
     public GameObject enemy;
     public GameObject fpoint;
@@ -42,7 +43,6 @@ public class GameplaycontrollerS : MonoBehaviour
     private void Update()
     {
         WeaponChange();
-        //PlayerA();
     }
 
 
@@ -59,10 +59,8 @@ public class GameplaycontrollerS : MonoBehaviour
 
     public void GameOver()
     {
-
             Time.timeScale = 0f;
             DeadPanel.SetActive(true);
-        
     }
 
 
@@ -70,13 +68,19 @@ public class GameplaycontrollerS : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Gameplay");
-
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void GameWon()
+    {
+        Time.timeScale = 0f;
+        WonPanel.SetActive(true);
+
     }
 
     void WeaponChange()
