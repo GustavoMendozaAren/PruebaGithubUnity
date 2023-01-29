@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    
 
     public int health = 20;
     public int currentHealth;
@@ -56,7 +57,8 @@ public class EnemyHealth : MonoBehaviour
             DeactivateEnemy();
             //Vector3 Hola = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
             //Instantiate(DeadSymbol, Hola, Quaternion.identity);
-
+            GameplaycontrollerS.instance.GameWon();
+            
         }
 
     }
