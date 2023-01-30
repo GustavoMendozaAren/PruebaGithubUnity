@@ -2,15 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestScriptLookAtPoint : MonoBehaviour
+public class EsBl1Z2 : MonoBehaviour
 {
-
     float counter = 0f;
-
-    private void Awake()
-    {
-        
-    }
 
     void Update()
     {
@@ -19,11 +13,11 @@ public class TestScriptLookAtPoint : MonoBehaviour
 
     void Movement_1()
     {
-        counter += Time.deltaTime * .14f;
+        counter += Time.deltaTime * .2f;
 
-        float x = 15*Mathf.Cos(counter);
-        float y = 5;
-        float z = 220 + (15*Mathf.Sin(counter));
+        float x = 4.5f - (18f * Mathf.Cos(counter));
+        float y = 5f;
+        float z = 145f + (18f * Mathf.Sin(counter));
 
         transform.position = new Vector3(x, y, z);
 
