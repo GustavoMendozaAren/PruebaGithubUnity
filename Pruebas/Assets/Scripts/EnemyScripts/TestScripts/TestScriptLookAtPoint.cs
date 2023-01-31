@@ -7,11 +7,6 @@ public class TestScriptLookAtPoint : MonoBehaviour
 
     float counter = 0f;
 
-    private void Awake()
-    {
-        
-    }
-
     void Update()
     {
         Movement_1();
@@ -23,7 +18,7 @@ public class TestScriptLookAtPoint : MonoBehaviour
 
         float x = 15*Mathf.Cos(counter);
         float y = 5;
-        float z = 220 + (15*Mathf.Sin(counter));
+        float z = 70 + (15*Mathf.Sin(counter));
 
         transform.position = new Vector3(x, y, z);
 
