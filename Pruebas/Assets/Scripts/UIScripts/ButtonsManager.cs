@@ -7,17 +7,22 @@ public class ButtonsManager : MonoBehaviour
 {
     public GameObject BuzoImagen;
     public GameObject BuzoDescripcion;
+    public GameObject BarracudaImagen;
+    public GameObject BarracudaInfo;
     public GameObject PanelJinetes;
     public GameObject PanelBaracuda;
     public GameObject Loadcanvas;
     public GameObject[] Char;
+    public GameObject[] Char2;
     public int selectChar;
+    public int selectChar2;
 
-    bool Ventana = false;
+    int a = 1;
 
     public void Guardar()
     {
         StartCoroutine(GuardarCoo());
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 
     IEnumerator GuardarCoo()
@@ -36,16 +41,18 @@ public class ButtonsManager : MonoBehaviour
 
     public void Jinetes()
     {
-        Ventana = true;
+        a = 2;
         PanelBaracuda.SetActive(false);
         PanelJinetes.SetActive(true);
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 
     public void Monturas()
     {
-        Ventana = false;
+        a = 3;
         PanelBaracuda.SetActive(true);
         PanelJinetes.SetActive(false);
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 
     /*public void DerChar()
@@ -60,29 +67,86 @@ public class ButtonsManager : MonoBehaviour
     
     public void NextChar()
     {
-        Char[selectChar].SetActive(false);
-        selectChar = (selectChar + 1) % Char.Length;
-        Char[selectChar].SetActive(true);
-        if (selectChar == 2)
+        if (a == 2)
         {
-            BuzoImagen.SetActive(true);
-            BuzoDescripcion.SetActive(true);
-        }
-        else
+
+            Char[selectChar].SetActive(false);
+            selectChar = (selectChar + 1) % Char.Length;
+            Char[selectChar].SetActive(true);
+            if (selectChar == 2)
+            {
+                BuzoImagen.SetActive(true);
+                BuzoDescripcion.SetActive(true);
+            }
+            else
+            {
+                BuzoImagen.SetActive(false);
+                BuzoDescripcion.SetActive(false);
+            }
+        }else if (a == 3)
         {
-            BuzoImagen.SetActive(false);
-            BuzoDescripcion.SetActive(false);
+            Char2[selectChar2].SetActive(false);
+            selectChar2 = (selectChar2 + 1) % Char2.Length;
+            Char2[selectChar2].SetActive(true);
+            if (selectChar2 == 2)
+            {
+                BarracudaImagen.SetActive(true);
+                BarracudaInfo.SetActive(true);
+            }
+            else
+            {
+                BarracudaImagen.SetActive(false);
+                BarracudaInfo.SetActive(false);
+            }
         }
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 
     public void PrevChar()
     {
-        Char[selectChar].SetActive(false);
-        selectChar--;
-        if (selectChar < 0)
+        if (a == 2)
         {
-            selectChar += Char.Length;
+
+            Char[selectChar].SetActive(false);
+            selectChar--;
+            if (selectChar < 0)
+            {
+                selectChar += Char.Length;
+            }
+            Char[selectChar].SetActive(true);
+            if (selectChar == 2)
+            {
+                BuzoImagen.SetActive(true);
+                BuzoDescripcion.SetActive(true);
+            }
+            else
+            {
+                BuzoImagen.SetActive(false);
+                BuzoDescripcion.SetActive(false);
+            }
+
         }
-        Char[selectChar].SetActive(true);
+        else if (a == 3)
+        {
+            Char2[selectChar2].SetActive(false);
+            selectChar2--;
+            if (selectChar2 < 0)
+            {
+                selectChar2 += Char2.Length;
+            }
+            Char2[selectChar2].SetActive(true);
+            if (selectChar2 == 2)
+            {
+                BarracudaImagen.SetActive(true);
+                BarracudaInfo.SetActive(true);
+            }
+            else
+            {
+                BarracudaImagen.SetActive(false);
+                BarracudaInfo.SetActive(false);
+            }
+
+        }
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 }

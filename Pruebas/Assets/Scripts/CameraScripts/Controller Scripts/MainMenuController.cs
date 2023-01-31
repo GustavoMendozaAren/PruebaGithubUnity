@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
 
     public GameObject CreditsMenu;
+    public GameObject OptionsPanel;
 
     public void PlayGame()
     {
@@ -26,6 +27,20 @@ public class MainMenuController : MonoBehaviour
     public void ReturnMenu()
     {
         CreditsMenu.SetActive(false);
+
+        FindObjectOfType<AudioManagerG>().Play2("Click");
+    }
+
+    public void Optionsmenu()
+    {
+        OptionsPanel.SetActive(true);
+
+        FindObjectOfType<AudioManagerG>().Play2("Click");
+    }
+
+    public void BackButton()
+    {
+        OptionsPanel.SetActive(false);
 
         FindObjectOfType<AudioManagerG>().Play2("Click");
     }
