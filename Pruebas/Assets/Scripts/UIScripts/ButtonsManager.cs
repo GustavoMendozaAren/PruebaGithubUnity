@@ -18,11 +18,18 @@ public class ButtonsManager : MonoBehaviour
     public int selectChar2;
 
     int a = 1;
+    bool clave1 = false, clave2 = false;
 
     public void Guardar()
-    {
-        StartCoroutine(GuardarCoo());
+    { 
+        if ( clave1 == true && clave2 == true)
+        {
+            StartCoroutine(GuardarCoo());
+            
+        }
         FindObjectOfType<AudioManagerG>().Play2("Click");
+
+
     }
 
     IEnumerator GuardarCoo()
@@ -77,11 +84,13 @@ public class ButtonsManager : MonoBehaviour
             {
                 BuzoImagen.SetActive(true);
                 BuzoDescripcion.SetActive(true);
+                clave1 = true;
             }
             else
             {
                 BuzoImagen.SetActive(false);
                 BuzoDescripcion.SetActive(false);
+                clave1 = false;
             }
         }else if (a == 3)
         {
@@ -92,11 +101,13 @@ public class ButtonsManager : MonoBehaviour
             {
                 BarracudaImagen.SetActive(true);
                 BarracudaInfo.SetActive(true);
+                clave2 = true;
             }
             else
             {
                 BarracudaImagen.SetActive(false);
                 BarracudaInfo.SetActive(false);
+                clave2 = false;
             }
         }
         FindObjectOfType<AudioManagerG>().Play2("Click");
@@ -118,11 +129,13 @@ public class ButtonsManager : MonoBehaviour
             {
                 BuzoImagen.SetActive(true);
                 BuzoDescripcion.SetActive(true);
+                clave1 = true;
             }
             else
             {
                 BuzoImagen.SetActive(false);
                 BuzoDescripcion.SetActive(false);
+                clave1 = false;
             }
 
         }
@@ -139,11 +152,14 @@ public class ButtonsManager : MonoBehaviour
             {
                 BarracudaImagen.SetActive(true);
                 BarracudaInfo.SetActive(true);
+                clave2 = true;
             }
             else
             {
                 BarracudaImagen.SetActive(false);
                 BarracudaInfo.SetActive(false);
+                clave2 = false;
+
             }
 
         }
