@@ -30,6 +30,11 @@ public class EnemyScript : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        transform.position = new Vector3(Random.Range(-13, 24), 5, Random.Range(37, 90));
+    }
+
     void FixedUpdate()
     {
         EnemyAI () ;

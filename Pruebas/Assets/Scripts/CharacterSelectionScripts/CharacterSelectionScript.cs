@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class CharacterSelectionScript : MonoBehaviour
 {
     public GameObject[] characters;
-    public GameObject[] text;
+    //public GameObject[] text;
     public int selectedCharacter = 0;
-    public int selectedText = 0;
+    //public int selectedText = 0;
     //public static int selectedCharacter = 0;
 
     public void NextCharacter()
@@ -17,9 +17,9 @@ public class CharacterSelectionScript : MonoBehaviour
         selectedCharacter = (selectedCharacter + 1) % characters.Length;
         characters[selectedCharacter].SetActive(true);
 
-        text[selectedText].SetActive(false);
-        selectedText = (selectedText + 1) % text.Length;
-        text[selectedText].SetActive(true);
+        //text[selectedText].SetActive(false);
+        //selectedText = (selectedText + 1) % text.Length;
+        //text[selectedText].SetActive(true);
     }
 
     public void PreviousCharacter()
@@ -33,13 +33,13 @@ public class CharacterSelectionScript : MonoBehaviour
         }
         characters[selectedCharacter].SetActive(true);
 
-        text[selectedText].SetActive(false);
-        selectedText--;
-        if (selectedText < 0)
-        {
-            selectedText += text.Length;
-        }
-        text[selectedText].SetActive(true);
+        //text[selectedText].SetActive(false);
+        //selectedText--;
+        //if (selectedText < 0)
+        //{
+        //    selectedText += text.Length;
+        //}
+        //text[selectedText].SetActive(true);
 
     }
     
