@@ -50,7 +50,6 @@ public class PlayerHealth : MonoBehaviour
 
             //GameplaycontrollerS.instance.isPlayerAlive = false;
 
-            //GameOver Panel
             GameplaycontrollerS.instance.GameOver();
         }
 

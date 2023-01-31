@@ -54,6 +54,7 @@ public class GameplaycontrollerS : MonoBehaviour
         } else if (instance != null)
         {
             Destroy(gameObject);
+            return;
         }
     }
 
@@ -68,12 +69,16 @@ public class GameplaycontrollerS : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Gameplay");
+
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 
     public void GameWon()
@@ -94,6 +99,8 @@ public class GameplaycontrollerS : MonoBehaviour
                 Weapon1 = false;
                 WeaponsText.Play("Weapon1Fade");
                 Ciclo = true;
+
+                FindObjectOfType<AudioManagerG>().Play2("Click");
             }
             else if (Input.GetKeyDown(KeyCode.E) && Ciclo)
             {
@@ -101,6 +108,8 @@ public class GameplaycontrollerS : MonoBehaviour
                 Weapon1 = true;
                 WeaponsText2.Play("Weapon2Fade");
                 Ciclo = false;
+
+                FindObjectOfType<AudioManagerG>().Play2("Click");
             }
 
         }
