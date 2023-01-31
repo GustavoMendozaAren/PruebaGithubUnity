@@ -12,15 +12,21 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
         //Debug.Log("The cursor entered the selectable UI element.");
+
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 
     public void CreditsM()
     {
         CreditsMenu.SetActive(true);
+
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 
     public void ReturnMenu()
     {
         CreditsMenu.SetActive(false);
+
+        FindObjectOfType<AudioManagerG>().Play2("Click");
     }
 }

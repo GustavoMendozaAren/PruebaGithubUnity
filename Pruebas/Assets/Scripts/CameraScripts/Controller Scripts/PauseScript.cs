@@ -10,6 +10,13 @@ public class PauseScript : MonoBehaviour
     public GameObject PauseMenuUI;
     public GameObject DeadPanel2;
 
+    private AimScript PlayerScr;
+
+    private void Awake()
+    {
+        PlayerScr = GetComponent<AimScript>();
+    }
+
     void Update()
     {
 
@@ -37,6 +44,10 @@ public class PauseScript : MonoBehaviour
         Time.timeScale = 1;
         GamePaused = false;
 
+        FindObjectOfType<AudioManagerG>().Play2("Click");
+
+        PlayerScr.enabled = true;
+
     }
 
     void Pause()
@@ -45,6 +56,10 @@ public class PauseScript : MonoBehaviour
         Time.timeScale = 0;
         GamePaused = true;
 
+        FindObjectOfType<AudioManagerG>().Play2("Click");
+
+        PlayerScr.enabled = false;
+
     }
 
     public void Menu()
@@ -52,6 +67,8 @@ public class PauseScript : MonoBehaviour
 
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+
+        FindObjectOfType<AudioManagerG>().Play2("Click");
 
     }
 
