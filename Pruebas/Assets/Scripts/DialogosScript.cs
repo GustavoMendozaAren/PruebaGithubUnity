@@ -6,9 +6,22 @@ using UnityEngine;
 public class DialogosScript : MonoBehaviour
 {
 
-    public GameObject UsaW;
+    public GameObject Tuto1;
+    public GameObject Tuto2;
     private void Start()
     {
-        UsaW.SetActive(true);
+        Invoke("Tut1", 1f);
+        Invoke("Tut2", 3f);
     }
+
+    public void Tut1()
+    {
+        Tuto1.SetActive(true);
+    }
+
+    public void Tut2()
+    {
+        Tuto2.SetActive(true);
+    }
+
 }
