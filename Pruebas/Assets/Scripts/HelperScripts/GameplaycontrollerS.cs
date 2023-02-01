@@ -19,6 +19,11 @@ public class GameplaycontrollerS : MonoBehaviour
     public Animator WeaponsText2;
     public Animator SwitchWeapons;
 
+    public GameObject WeponsT;
+
+    float contador = 0f;
+
+
     [HideInInspector]
     public bool isPlayerAlive;
 
@@ -39,6 +44,8 @@ public class GameplaycontrollerS : MonoBehaviour
         isPlayerAlive = true;
 
         Invoke("ActiveEnemy", 3f);
+
+        //WeponsT = GetComponent<Animation>();
     }
     private void Update()
     {
@@ -118,7 +125,10 @@ public class GameplaycontrollerS : MonoBehaviour
     public void WeaponCollected()
     {
         CambioDeArma = true;
-        SwitchWeapons.Play("CambioDeAramaFade");
+        //SwitchWeapons.Play("CambioDeAramaFade");
+
+        WeponsT.SetActive(true);
+
     }
 
     void ActiveEnemy()
