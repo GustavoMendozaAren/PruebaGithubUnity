@@ -32,11 +32,11 @@ public class BulletProjectile : MonoBehaviour
         {
             if (GameplaycontrollerS.instance.Weapon1 == false)
             {
-                another.GetComponent<EnemyHealth>().ApplyDamage(5);
+                another.GetComponent<EnemyHealth>().ApplyDamage(damageAmount);
             }
             if (GameplaycontrollerS.instance.Weapon1 == true)
             {
-                another.GetComponent<EnemyHealth>().ApplyDamage(10);
+                another.GetComponent<EnemyHealth>().ApplyDamage(damageAmount+5);
             }
             //Debug.Log("HitEnemy");
             //another.GetComponent<EnemyHealth>().ApplyDamage(damageAmount);

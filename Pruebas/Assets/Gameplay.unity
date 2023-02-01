@@ -23074,7 +23074,6 @@ MonoBehaviour:
   UsaETt: {fileID: 74586624}
   isPlayerAlive: 0
   Weapon1: 0
-  ClickDV: 0
 --- !u!4 &1988942150
 Transform:
   m_ObjectHideFlags: 0
@@ -23929,6 +23928,10 @@ PrefabInstance:
       propertyPath: PauseS
       value: 
       objectReference: {fileID: 408098499}
+    - target: {fileID: 6537935842071286242, guid: 35287e355d7f47b4d81b6e76f778ee40, type: 3}
+      propertyPath: rotationSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35287e355d7f47b4d81b6e76f778ee40, type: 3}
 --- !u!1001 &6621923916780007861

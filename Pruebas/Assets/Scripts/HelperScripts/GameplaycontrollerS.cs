@@ -37,7 +37,7 @@ public class GameplaycontrollerS : MonoBehaviour
     private bool Ciclo = false;
     private bool CambioDeArma = false;
 
-    public bool ClickDV = false;
+    //public bool ClickDV = false;
 
     private void Awake()
     {
@@ -75,7 +75,7 @@ public class GameplaycontrollerS : MonoBehaviour
     {
             Time.timeScale = 0f;
             DeadPanel.SetActive(true);
-            ClickDV = true;
+            //ClickDV = true;
     }
 
 
@@ -100,7 +100,7 @@ public class GameplaycontrollerS : MonoBehaviour
     {
         Time.timeScale = 0f;
         WonPanel.SetActive(true);
-        ClickDV = true;
+        //ClickDV = true;
 
     }
 
