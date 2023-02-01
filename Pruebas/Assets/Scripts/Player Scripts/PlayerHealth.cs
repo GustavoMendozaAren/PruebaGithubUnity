@@ -63,6 +63,8 @@ public class PlayerHealth : MonoBehaviour
             other.gameObject.SetActive(false);
             GameplaycontrollerS.instance.WeaponCollected();
 
+
+
             FindObjectOfType<AudioManagerG>().Play2("Suspiro");
         }
     }

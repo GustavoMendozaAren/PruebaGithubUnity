@@ -7,6 +7,8 @@ public class PauseScript : MonoBehaviour
 {
     public static bool GamePaused = false;
 
+    public bool Sh = false;
+
     public GameObject PauseMenuUI;
     public GameObject OptionsMenu;
     //public GameObject DeadPanel2;
@@ -49,6 +51,8 @@ public class PauseScript : MonoBehaviour
         Time.timeScale = 1;
         GamePaused = false;
 
+        Sh = false;
+
         FindObjectOfType<AudioManagerG>().Play2("Click");
 
         //PlayerScr.enabled = true;
@@ -60,6 +64,8 @@ public class PauseScript : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         GamePaused = true;
+
+        Sh = true;
 
         FindObjectOfType<AudioManagerG>().Play2("Click");
 

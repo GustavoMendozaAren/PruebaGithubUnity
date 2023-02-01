@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AimScript : MonoBehaviour
 {
+    public PauseScript PauseS;
 
     private Rigidbody myBody;
 
@@ -38,6 +39,8 @@ public class AimScript : MonoBehaviour
         moveVertical = 0f;
         rotY = transform.localRotation.eulerAngles.y;
         rotX = transform.localRotation.eulerAngles.x;
+
+        
     }
 
 
@@ -97,23 +100,29 @@ public class AimScript : MonoBehaviour
 
     void Shooting()
     {
-        Vector3 mouseWorldPosition = Vector3.zero;
-
-        Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
-        Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        if (PauseS.Sh == false)
         {
-            //debugTransform.position = raycastHit.point;
-            mouseWorldPosition = raycastHit.point;
-        }
+
+            //FindObjectOfType<PauseScript>().
+
+            Vector3 mouseWorldPosition = Vector3.zero;
+
+            Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+            Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+            if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+            {
+                //debugTransform.position = raycastHit.point;
+                mouseWorldPosition = raycastHit.point;
+            }
 
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
-            Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            if (Input.GetMouseButtonDown(0))
+            {
+                Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
+                Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
 
 
+            }
         }
     }
     /*private void OnTriggerEnter(Collider other)
