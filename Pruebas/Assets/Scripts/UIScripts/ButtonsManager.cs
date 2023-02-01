@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonsManager : MonoBehaviour
 {
+    public GameObject IncognitoImage;
+    public GameObject IncogBar;
     public GameObject BuzoImagen;
     public GameObject BuzoDescripcion;
     public GameObject BarracudaImagen;
@@ -86,12 +88,20 @@ public class ButtonsManager : MonoBehaviour
                 BuzoDescripcion.SetActive(true);
                 clave1 = true;
             }
-            else
+            else if(selectChar == 0 || selectChar == 1)
             {
+                IncognitoImage.SetActive(false);
+                BuzoImagen.SetActive(false);
+                BuzoDescripcion.SetActive(false);
+                clave1 = false;
+            }else
+            {
+                IncognitoImage.SetActive(true);
                 BuzoImagen.SetActive(false);
                 BuzoDescripcion.SetActive(false);
                 clave1 = false;
             }
+
         }else if (a == 3)
         {
             Char2[selectChar2].SetActive(false);
@@ -103,8 +113,16 @@ public class ButtonsManager : MonoBehaviour
                 BarracudaInfo.SetActive(true);
                 clave2 = true;
             }
+            else if (selectChar2 == 0 || selectChar2 == 1 )
+            {
+                IncogBar.SetActive(false);
+                BarracudaImagen.SetActive(false);
+                BarracudaInfo.SetActive(false);
+                clave2 = false;
+            }
             else
             {
+                IncogBar.SetActive(true);
                 BarracudaImagen.SetActive(false);
                 BarracudaInfo.SetActive(false);
                 clave2 = false;
@@ -127,12 +145,20 @@ public class ButtonsManager : MonoBehaviour
             Char[selectChar].SetActive(true);
             if (selectChar == 2)
             {
+                IncognitoImage.SetActive(false);
                 BuzoImagen.SetActive(true);
                 BuzoDescripcion.SetActive(true);
                 clave1 = true;
             }
-            else
+            else if(selectChar == 0 || selectChar == 1)
             {
+                IncognitoImage.SetActive(false);
+                BuzoImagen.SetActive(false);
+                BuzoDescripcion.SetActive(false);
+                clave1 = false;
+            }else
+            {
+                IncognitoImage.SetActive(true);
                 BuzoImagen.SetActive(false);
                 BuzoDescripcion.SetActive(false);
                 clave1 = false;
@@ -150,16 +176,24 @@ public class ButtonsManager : MonoBehaviour
             Char2[selectChar2].SetActive(true);
             if (selectChar2 == 2)
             {
+                IncogBar.SetActive(false);
                 BarracudaImagen.SetActive(true);
                 BarracudaInfo.SetActive(true);
                 clave2 = true;
             }
-            else
+            else if(selectChar2 == 0 || selectChar2 == 1)
             {
+                IncogBar.SetActive(false);
                 BarracudaImagen.SetActive(false);
                 BarracudaInfo.SetActive(false);
                 clave2 = false;
-
+            }
+            else
+            {
+                IncogBar.SetActive(true);
+                BarracudaImagen.SetActive(false);
+                BarracudaInfo.SetActive(false);
+                clave2 = false;
             }
 
         }

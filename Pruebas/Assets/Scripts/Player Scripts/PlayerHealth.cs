@@ -28,10 +28,10 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = health;
         playerhealthBar.MaxHealth(currentHealth);
     }
-    public void ApplyDamage(int damageAmaount)
+    public void ApplyDamage(int damageAmount)
     {
 
-        health -= damageAmaount;
+        health -= damageAmount;
 
         playerhealthBar.SetHealth(health);
 
@@ -44,13 +44,15 @@ public class PlayerHealth : MonoBehaviour
 
         if (health == 0)
         {
-            playerScript.enabled = false;
+            GameplaycontrollerS.instance.GameOver();
+            //print("Hola");
+            //playerScript.enabled = false;
             //DeadPanel.SetActive(true);
             //Time.timeScale = 0f;
 
             //GameplaycontrollerS.instance.isPlayerAlive = false;
 
-            GameplaycontrollerS.instance.GameOver();
+            
         }
 
 
