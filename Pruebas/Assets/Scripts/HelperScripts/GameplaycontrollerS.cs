@@ -21,7 +21,11 @@ public class GameplaycontrollerS : MonoBehaviour
 
     public GameObject WeponsT;
 
+    public GameObject UsaETt;
+
     float contador = 0f;
+
+    //wwwwwwwwwwwwwwwwwwwwwwwwwwwpublic BulletProjectile Dmg;
 
 
     [HideInInspector]
@@ -32,6 +36,8 @@ public class GameplaycontrollerS : MonoBehaviour
 
     private bool Ciclo = false;
     private bool CambioDeArma = false;
+
+    public bool ClickDV = false;
 
     private void Awake()
     {
@@ -69,6 +75,7 @@ public class GameplaycontrollerS : MonoBehaviour
     {
             Time.timeScale = 0f;
             DeadPanel.SetActive(true);
+            ClickDV = true;
     }
 
 
@@ -78,6 +85,7 @@ public class GameplaycontrollerS : MonoBehaviour
         SceneManager.LoadScene("Gameplay");
 
         FindObjectOfType<AudioManagerG>().Play2("Click");
+        
     }
 
     public void MainMenu()
@@ -92,6 +100,7 @@ public class GameplaycontrollerS : MonoBehaviour
     {
         Time.timeScale = 0f;
         WonPanel.SetActive(true);
+        ClickDV = true;
 
     }
 
@@ -107,6 +116,8 @@ public class GameplaycontrollerS : MonoBehaviour
                 WeaponsText.Play("Weapon1Fade");
                 Ciclo = true;
 
+                //Dmg.damageAmount = 5;
+
                 FindObjectOfType<AudioManagerG>().Play2("Click");
             }
             else if (Input.GetKeyDown(KeyCode.E) && Ciclo)
@@ -115,6 +126,8 @@ public class GameplaycontrollerS : MonoBehaviour
                 Weapon1 = true;
                 WeaponsText2.Play("Weapon2Fade");
                 Ciclo = false;
+
+                //Dmg.damageAmount = 10;
 
                 FindObjectOfType<AudioManagerG>().Play2("Click");
             }
@@ -126,6 +139,7 @@ public class GameplaycontrollerS : MonoBehaviour
     {
         CambioDeArma = true;
         //SwitchWeapons.Play("CambioDeAramaFade");
+        UsaETt.SetActive(true);
 
         WeponsT.SetActive(true);
 
