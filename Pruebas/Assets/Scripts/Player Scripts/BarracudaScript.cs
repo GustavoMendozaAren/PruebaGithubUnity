@@ -13,7 +13,7 @@ public class BarracudaScript : MonoBehaviour
     //private bool isPlayerMoving;
 
     public float playerSpeed = 0.1f;
-    public float rotationSpeed = 8f;
+    public float rotationSpeed = 3f;
 
     private float moveVertical;
 
@@ -100,7 +100,7 @@ public class BarracudaScript : MonoBehaviour
 
     void Shooting()
     {
-        if (PauseS.Sh == false || ScriptGameS == false)
+        if (PauseS.Sh == false)
         {
 
             //FindObjectOfType<PauseScript>().
