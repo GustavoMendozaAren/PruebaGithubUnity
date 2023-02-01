@@ -85,7 +85,7 @@ public class BarracudaScript : MonoBehaviour
             //transform.position += transform.forward * (moveVertical * playerSpeed);
         }
 
-        rotX += rotationSpeed * Input.GetAxis("Mouse Y");
+        rotX -= rotationSpeed * Input.GetAxis("Mouse Y");
 
         rotY += rotationSpeed * Input.GetAxis("Mouse X");
 
@@ -93,7 +93,7 @@ public class BarracudaScript : MonoBehaviour
 
         //rotX += moveUp * rotationSpeed;
         //rotY += moveHorizontal * rotationSpeed;
-        transform.rotation = Quaternion.Euler(rotX, rotY, 0f);
+        transform.rotation = Quaternion.Euler(rotX, rotY, 180f);
 
 
     }
