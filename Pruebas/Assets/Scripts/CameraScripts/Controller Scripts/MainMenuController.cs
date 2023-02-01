@@ -44,4 +44,9 @@ public class MainMenuController : MonoBehaviour
 
         FindObjectOfType<AudioManagerG>().Play2("Click");
     }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
 }

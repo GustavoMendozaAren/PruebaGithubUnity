@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BulletProjectile : MonoBehaviour
 {
-
-    public int damageAmount = 2;
+    [HideInInspector]
+    public int damageAmount = 5;
 
     private bool Weapon1 = false;
 
@@ -30,9 +30,16 @@ public class BulletProjectile : MonoBehaviour
     {
         if (another.CompareTag("Enemy"))
         {
-            
+            if (GameplaycontrollerS.instance.Weapon1 == false)
+            {
+                another.GetComponent<EnemyHealth>().ApplyDamage(5);
+            }
+            if (GameplaycontrollerS.instance.Weapon1 == true)
+            {
+                another.GetComponent<EnemyHealth>().ApplyDamage(10);
+            }
             //Debug.Log("HitEnemy");
-            another.GetComponent<EnemyHealth>().ApplyDamage(damageAmount);
+            //another.GetComponent<EnemyHealth>().ApplyDamage(damageAmount);
         }
 
         if (another.GetComponent<BulletTarget>() != null)
@@ -48,11 +55,13 @@ public class BulletProjectile : MonoBehaviour
             {
                 //print("Hola");
                 Instantiate(WeaponC1, transform.position, Quaternion.identity);
+                
             }
             if (GameplaycontrollerS.instance.Weapon1 == true)
             {
                 //print("Adios");
                 Instantiate(WeaponC2, transform.position, Quaternion.identity);
+                
             }
             //Hit something else
             
